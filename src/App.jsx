@@ -19,9 +19,35 @@ export default function App() {
         },
       ]
     })
+
+    setNewItem("")
   }
 
-  console.log(todos)
+  function toggleTodo(id, completed) {
+    setTodos(currentTodos => {
+      return currentTodos.map(todo => {
+        // what todo 
+        if (todo.id === id) {
+          // return new updated version
+          return { ...todo, completed }
+        }
+
+        // return current todo. as is
+        return todo
+      })
+    })
+  }
+
+  function deleteTodo(id) {
+    //use al currentTodos
+    setTodos(currentTodos => {
+      //filter all todos exept for the one i want to remove
+      // so only all other todos are returned
+      return currentTodos.filter(todo => todo.id !== id)
+    })
+  }
+
+  // console.log(todos)
 
   return (
     <>
@@ -39,20 +65,23 @@ export default function App() {
       </form>
       <h1 className="header">Mindbend List</h1>
       <ul className="list">
-        <li>
-          <label>
-            <input type="checkbox" />
-            Mind bend 1
-          </label>
-          <button className="btn btn-danger">Delete</button>
-        </li>
-        <li>
-          <label>
-            <input type="checkbox" />
-            Mind bend 2
-          </label>
-          <button className="btn btn-danger">Delete</button>
-        </li>
+        {todos.length === 0 && "No mindbends"}
+        {todos.map(todo => {
+          return (
+            <li key={todo.id}>
+              <label>
+                <input type="checkbox" checked={todo.completed}
+
+                  // onChange event listener, it is calling the toggleTodo function, and pass along wether or not it is checked
+                  onChange={e => toggleTodo(todo.id, e.target.checked)} />
+                {todo.title}
+              </label>
+              <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">Delete</button>
+            </li>
+          )
+        })}
+
+
       </ul>
     </>
   )
