@@ -1,27 +1,40 @@
 // omdat dit een oudere? versie van react is moet ik useState zelf importen
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css"
+import { NewTodoForm } from "./newTodoForm";
+import { ToDoList } from "./ToDoList";
+
 
 export default function App() {
-  const [newItem, setNewItem] = useState("")
-  const [todos, setTodos] = useState([])
 
-  function handleSubmit(e) {
-    e.preventDefault()
+  // const [todos, setTodos] = useState([])
+  // check for stored todos and return them 
+  const [todos, setTodos] = useState(
+    () => {
+      const storedTodos = localStorage.getItem("todos");
+      return storedTodos ? JSON.parse(storedTodos) : [];
+    }
+  );
 
+  function addTodo(title) {
     setTodos((currentTodos) => {
       return [
         ...currentTodos,
         {
           id: crypto.randomUUID(),
-          title: newItem,
+          title,
           completed: false
         },
       ]
     })
-
-    setNewItem("")
   }
+
+  // store data local 
+  useEffect(
+    () => {
+      // Store todos in Local Storage whenever the todos state changes
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
 
   function toggleTodo(id, completed) {
     setTodos(currentTodos => {
@@ -51,38 +64,16 @@ export default function App() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="new-item-form">
-        <div className="form-row">
-          <label htmlFor="item">New Item</label>
-          <input
-            value={newItem}
-            onChange={e => setNewItem(e.target.value)}
-            type="text"
-            id="item"
-          />
-        </div>
-        <button className="btn">Add</button>
-      </form>
+      <NewTodoForm onSubmit={addTodo} />
       <h1 className="header">Mindbend List</h1>
-      <ul className="list">
-        {todos.length === 0 && "No mindbends"}
-        {todos.map(todo => {
-          return (
-            <li key={todo.id}>
-              <label>
-                <input type="checkbox" checked={todo.completed}
-
-                  // onChange event listener, it is calling the toggleTodo function, and pass along wether or not it is checked
-                  onChange={e => toggleTodo(todo.id, e.target.checked)} />
-                {todo.title}
-              </label>
-              <button onClick={() => deleteTodo(todo.id)} className="btn btn-danger">Delete</button>
-            </li>
-          )
-        })}
-
-
-      </ul>
+      <ToDoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   )
 }
+
+
+
+
+
+
+
