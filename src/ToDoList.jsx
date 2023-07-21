@@ -1,6 +1,6 @@
 import { ToDoItem } from "./ToDoItem"
 
-const introduction = <p>✧ Welcome to Daily Mind Bendy <br></br> <br></br> Write down one thing you did better today than yesterday! <br></br> <br></br>After 100 entries, order a book with your daily improvements. It's a reminder of your progress, especially during tough days.<br></br> <br></br> Just flip and see your growth, staying motivated to do better every day."</p>
+const introduction = <p>✧ Welcome to Daily Mind Bendy! <br></br> <br></br> Write down one thing you did better today than yesterday! <br></br> <br></br>After 100 entries, order a book with your daily improvements. It's a reminder of your progress, especially during tough days.<br></br> <br></br> Just flip trough and see your growth, staying motivated to do better every day.</p>
 
 export function ToDoList({ todos, toggleTodo, deleteTodo }) {
     return (

@@ -21,14 +21,14 @@ export function NewTodoForm({ onSubmit }) {
           <h1>Mind Bendy ✧</h1>
           </div>
           <label htmlFor="item" className="new-title">New bendy</label>
-          <input
+          <input placeholder="What went well today?"
             value={newItem}
             onChange={e => setNewItem(e.target.value)}
             type="text"
             id="item"
           />
         </div>
-        <button className="btn">Add</button>
+        <button className="btn" id="btn-add">Add</button>
       </form>
   )
 }
