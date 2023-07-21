@@ -65,8 +65,10 @@ export default function App() {
   return (
     <>
       <NewTodoForm onSubmit={addTodo} />
+      <div className="list-container">
       <h1 className="header">Mindbend List</h1>
       <ToDoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      </div>
     </>
   )
 }

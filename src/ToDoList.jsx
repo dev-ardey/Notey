@@ -12,12 +12,6 @@ export function ToDoList({ todos, toggleTodo, deleteTodo }) {
                     deleteTodo={deleteTodo}
                 />
 
-                // {...todo} passes each id as they are
-                // id={todo.id}
-                // completed={todo.completed}
-                // title={todo.title}
-
-
             })}
 
 
