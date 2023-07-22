@@ -172,6 +172,7 @@ h1 {
 
 .list li:has(input:checked) label {
   color: hsl(40, 100%, 98%);
+  
   /* color: var( --background-st-color-3); */
 }
 
@@ -197,6 +198,7 @@ h1 {
 .list li:has(input:focus-visible) label {
   outline: 1px solid hsl(200, 100%, 50%);
   
+  
 }
 
 .list li input {
@@ -210,24 +212,25 @@ h1 {
 }
 
 .list li label::before {
-  content: "";
+  content: "✦";
   display: block;
   width: 0.9rem;
   height: 0.9rem;
-  background: hsl(200, 100%, 90%);
+  /* background: hsl(200, 100%, 90%); */
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var( --theme-background-1-dark);
 
-  border: 1px solid var( --theme-color-1-white);
-  background: var(  --theme-background-1-white);
+
+  /* border: 1px solid var( --theme-color-1-white); */
+  /* background: var(  --theme-background-1-white); */
   border-radius: 50%;
   
 }
 
 .list li label:hover::before {
-  background: hsl(200, 100%, 80%);
-  
+  /* background: hsl(200, 100%, 80%);   */
   
 }
 
@@ -243,13 +246,13 @@ h1 {
    background: var( --theme-color-2-white);
   color: white;
 
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
   font-weight: bold;
   
 }
 
 .list li:has(input:checked) label:hover::before {
-  background: var( --theme-color-1-white);
+  color: var( --theme-background-1-dark);
 }
 
 

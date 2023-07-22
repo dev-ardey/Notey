@@ -66,7 +66,7 @@ export default function App() {
     <>
       <NewTodoForm onSubmit={addTodo} />
       <div className="list-container">
-        <h1 className="header">My Bendy List</h1>
+        <h1 className="header">My Notey List</h1>
         <ToDoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
       </div>
     </>
