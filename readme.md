@@ -1,4 +1,4 @@
-✧ Welcome to Notey!
+## ✧ Welcome to Notey!
 
 Write down one thing you did better today than yesterday!
 
@@ -12,7 +12,7 @@ It's a reminder of your progress, especially during tough days.
 Written in React.
 
 
-This project includes:
+# This project includes:
 
 📟LocalStorage Data Storage:
 
