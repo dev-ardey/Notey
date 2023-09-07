@@ -9,9 +9,10 @@ Just flip through and see your growth, staying motivated to do better every day.
 It's a reminder of your progress, especially during tough days.
 
 
+Written in React.
 
 
-Made with React
+This project includes:
 
 📟LocalStorage Data Storage:
 
