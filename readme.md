@@ -15,7 +15,7 @@ Made with React
 
 📟LocalStorage Data Storage:
 
-  The app uses localStorage to store daily improvements, ensuring that data is persisted even after the user closes or refreshes the page.
+    The app uses localStorage to store daily improvements, ensuring that data is persisted even after the user closes or     refreshes the page.
 
 🪄Adding New Improvements:
 
