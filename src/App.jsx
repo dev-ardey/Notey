@@ -1,9 +1,33 @@
-// omdat dit een oudere? versie van react is moet ik useState zelf importen
+// older version? import vuseState myself
 import React, { useState, useEffect } from "react";
 import "./styles.css"
 import { NewTodoForm } from "./newTodoForm";
 import { ToDoList } from "./ToDoList";
 
+// Notey test
+// export default function App() {
+
+//   // const [todos, setTodos] = useState([])
+//   // check for stored todos and return them 
+//   const [todos, setTodos] = useState(
+//     () => {
+//       const storedTodos = localStorage.getItem("todos");
+//       return storedTodos ? JSON.parse(storedTodos) : [];
+//     }
+//   );
+
+//   function addTodo(title) {
+//     setTodos((currentTodos) => {
+//       return [
+//         ...currentTodos,
+//         {
+//           id: crypto.randomUUID(),
+//           title,
+//           completed: false
+//         },
+//       ]
+//     })
+//   }
 
 export default function App() {
 
