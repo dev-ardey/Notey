@@ -53,4 +53,6 @@ Made with React
 
       The app applies CSS styles to elements for an improved user interface.
 
-📈Error Handling: While not explicitly mentioned, the app should have error handling mechanisms, especially for cases like empty submissions or failed local storage.
+📈Error Handling:
+
+        While not explicitly mentioned, the app should have error handling mechanisms, especially for cases like empty submissions or failed local storage.
