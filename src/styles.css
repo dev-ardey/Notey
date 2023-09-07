@@ -16,7 +16,6 @@
 }
 
 body {
-
   background: linear-gradient(217deg, var(  --background-st-color-3), rgba(255,0,0,0) 70.71%),            linear-gradient(127deg, var(  --background-st-color-2), rgba(0,255,0,0) 70.71%),            linear-gradient(336deg, var(  --background-st-color-4), rgba(0,0,255,0) 70.71%);
 
   color:black;
@@ -33,7 +32,6 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 30px;
-
   /* original box shadow */
   /* box-shadow: 12px 12px 20px 5px var(--theme-background-1-dark); */
   box-shadow: 12px 12px 20px 0px var(--theme-background-1-dark);
@@ -98,12 +96,10 @@ h1 {
   cursor: pointer;
   outline: none;
   border-radius: 30px;
-  
 }
 
 #btn-add {
   box-shadow: 12px 12px 20px 0px var(--theme-background-1-dark);
-
 }
 
 .btn:hover,
@@ -128,8 +124,6 @@ h1 {
   background: hsl(200, 100%, 30%);
   padding: 0.25em 0.5em;
   border-radius: 30px;
-  
-
 }
 
 .new-item-form input:focus {
@@ -175,7 +169,6 @@ h1 {
 
 .list li:has(input:focus-visible) label {
   outline: 1px solid hsl(200, 100%, 50%);
-  
 }
 
 .list li input {
@@ -185,7 +178,6 @@ h1 {
   appearance: none;
   pointer-events: none;
   position: absolute;
-  
 }
 
 .list li label::before {
@@ -198,8 +190,6 @@ h1 {
   justify-content: center;
   align-items: center;
   color: var( --theme-background-1-dark);
-
-
   /* border: 1px solid var( --theme-color-1-white); */
   /* background: var(  --theme-background-1-white); */
   border-radius: 50%;
@@ -223,16 +213,11 @@ h1 {
 
   /* font-size: 0.75rem; */
   font-weight: bold;
-  
 }
 
 .list li:has(input:checked) label:hover::before {
   color: var( --theme-background-1-dark);
 }
-
-
-
-
 
 
 
@@ -260,7 +245,6 @@ h1 {
   padding-right: 2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-
   box-shadow: 12px 12px 20px 0px var(--theme-background-1-dark);
 }
 
